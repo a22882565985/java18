@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="laserPrint" class="com.turing.spring03.LaserPrint">
+    </bean>
+   <bean id="pinPrint" class="com.turing.spring03.PinPrint">
+    </bean>
+    <!-- 构造器注入 -->
+   <!-- <bean id="printHouse" class="com.turing.spring03.PrintHouse">
+    	<constructor-arg name="print" ref="laserPrint"></constructor-arg>
+    </bean> -->
+     <!-- 属性注入 -->
+   <bean id="printHouse2" class="com.turing.spring03.PrintHouse">
+    	<property name="print" ref="laserPrint"></property>
+    </bean>
+</beans>
